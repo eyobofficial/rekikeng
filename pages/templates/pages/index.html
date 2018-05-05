@@ -1,0 +1,620 @@
+{% load static %}<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    
+<head>
+        <title>Solomon Engineering Group</title>
+
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="author" content="Eyob Tariku">
+        <meta name="description" content="We are a structural engineering company in Addis Ababa, Ethiopia that strategically applies the benefits and best practices of new methods to enhance traditional design-bid-build projects.">
+        <meta name="keywords" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+        <!-- Apple Touch Icons -->
+        <link rel="apple-touch-icon-precomposed" href="{% static 'img/touch_icon.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'img/touch_icon_72x72.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'img/touch_icon_114x114.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'img/touch_icon_144x144.png' %}">
+
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/lib/jquery-ui.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+
+        <!-- Typekit -->
+        <script type="text/javascript" src="{% static 'js/lib/ppi0tso.js' %}"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <!-- Modernizr -->
+        <script type="text/javascript" src="{% static 'js/lib/modernizr.js' %}"></script>
+    </head>
+    <body class="relative">
+        <div id="loading"></div>
+        <div id="keyboard_icons">
+            <div id="up" class="key"></div>
+            <div id="horizontal">
+                <div id="left" class="active key"></div>
+                <div id="down" class="active key"></div>
+                <div id="right" class="active key"></div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="navbar-inner">
+                <div class="container btnNavbarWrapper" data-toggle="collapse" data-target=".nav-collapse">
+                    <a class="btn btn-navbar">
+                        <img src="{% static 'img/placeholder.png' %}" data-id="mobile_nav" id="minus" class="load-png-or-svg" alt="open navigation">
+                        <img src="{% static 'img/placeholder.png' %}" data-id="mobile_nav" id="plus" class="load-png-or-svg" alt="close navigation">
+                    </a>
+                    <a class="brand hidden-phone" href="#home">
+                        <img src="{% static 'img/logo.png' %}" data-id="logo" class="logo" alt="Solomon Engineering Logo">
+                        <img src="{% static 'img/logo_hover.png' %}" data-id="logo_hover" class="logo" alt="Solomon Engineering logo hover">
+                        Solomon Engineering Group
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right relative">
+                            <div id="nav-strip"></div>
+                            <li><a href="#about" id="1" class="span1">About</a></li>
+                            <li><a href="#process" id="2" class="span1">Process</a></li>
+                            <li><a href="#services" id="3" class="span1">Services</a></li>
+                            <li><a href="#contact" id="4" class="span1">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section id="mobile-banner" class="hidden-desktop hidden-tablet">
+            <div class="container-fluid">
+                <div class="text-center">
+                    <img src="{% static 'img/logo-bg.png' %}" class="mobile-logo" alt="Solomon Engineering Group">
+                    <h1>Solomon Engineering Group</h1>
+                    <p class="text-fade text-center small">The Right Thing, The First Time</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="home" class="flexslider hidden-phone">
+            <!-- <object data="static/img/placeholder.png" data-id="logo" type="image/svg+xml" id="load_mobile_svg" class="logo">
+                <img src="static/img/placeholder.png" data-id="logo" id="load_mobile_png" class="logo" alt="dga logo">
+            </object> -->
+
+            <ul class="slides">
+                <li data-id="0">
+                    <div class="image">
+                        <img src="{% static 'img/placeholder.png' %}" data-id="01_structural_design" class="load-jpg" alt="blueprints">
+                    </div>
+                    <div class="content">
+                        <div class="top-bar"></div>
+                        <div class="titles">
+                            <h3>Structural Design</h3>
+                            <h4>Solution-focused approach to deliver integrated designs for your new and existing buildings.</h4>
+                        </div>
+                    </div>
+                </li>
+                <li data-id="1">
+                    <div class="image">
+                        <img src="{% static 'img/placeholder.png' %}" data-id="02_seismic_design" class="load-jpg" alt="team">
+                    </div>
+                    <div class="content">
+                        <div class="top-bar"></div>
+                        <div class="titles">
+                            <h3>Seismic Design</h3>
+                            <h4>Design buildings that addresses key performance goals.</h4>
+                        </div>
+                    </div>
+                </li>
+                <li data-id="2">
+                    <div class="image">
+                        <img src="{% static 'img/placeholder.png' %}" data-id="03_structural_review" class="load-jpg" alt="books">
+                    </div>
+                    <div class="content">
+                        <div class="top-bar"></div>
+                        <div class="titles">
+                            <h3>Structural Peer Review</h3>
+                            <h4>Scientific observations and constructive suggestions.</h4>
+                        </div>
+                    </div>
+                </li>
+                <li data-id="3">
+                    <div class="image">
+                        <img src="{% static 'img/placeholder.png' %}" data-id="04_value_engineering" class="load-jpg" alt="office">
+                    </div>
+                    <div class="content">
+                        <div class="top-bar"></div>
+                        <div class="titles">
+                            <h3>Value Engineering</h3>
+                            <h4>Optimized structural designs throughout the design process.</h4>
+                        </div>
+                    </div>
+                </li>
+                
+                <li data-id="4">
+                    <div class="image">
+                        <img src="{% static 'img/placeholder.png' %}" data-id="05_project_managment" class="load-jpg" alt="ruler">
+                    </div>
+                    <div class="content">
+                        <div class="top-bar"></div>
+                        <div class="titles">
+                            <h3>Construction Management</h3>
+                            <h4>Comprehensive management of every stage of the project.</h4>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="blueprints">
+            <div id="spacer"></div>
+            <section id="about" class="relative">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12 section-header">
+                            <span class="title-bar"></span>
+                            <h1>About</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container module" id="what_module" data-id="0">
+                    <div class="row">
+                        <div class="span12 relative">
+                            <blockquote>
+                                <p><i class="fa fa-quote-left"></i>&nbsp; Structural engineering is the art of molding materials we don't wholly understand, into shapes we can't fully analyze, so as to withstand forces we can't really assess, in such a way that the community at large has no reason to suspect the extent of our ignorance.&nbsp; <i class="fa fa-quote-right"></i></p>
+                                <small class="text-right">James E. Amrhein (Masonry Institute of America)</small>
+                            </blockquote>
+                            <br>
+                            <h3>We are a structural engineering company that strategically applies the benefits and best practices of new methods to enhance traditional design-bid-build projects.</h3>
+                            <p>Our embrace of advanced building information modeling technology and our collaborative, holistic approaches offer increased design and construction efficiency to solve several problems in contemporary construction such as low productivity and waste, time overruns, quality issues, and conflicts during construction among the key stakeholders of owner, architect and contractor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div class="container module" id="who_module" data-id="1">
+                        <div class="row">
+                            <div class="span12" id="thumbnails">
+                                <ul>
+                                    <li data-id="1"><img src="static/img/john_doe_avatar.png" data-id="jack" alt="Solomon"></li><li
+                                    data-id="2"><img src="static/img/john_doe_avatar.png" data-id="dale" alt="John"></li><li
+                                    data-id="3"><img src="static/img/john_doe_avatar.png" data-id="brad" alt="John"></li><li
+                                    data-id="4"><img src="static/img/john_doe_avatar.png" data-id="marc" alt="John"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12">
+                                <div class="flexslider" id="bios">
+                                    <ul class="slides">
+                                        <li>
+                                            <div class="bio-meta">
+                                                <h4>The Team</h4>
+                                            </div>
+                                            <div class="bar"></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nihil fugiat vel magni vitae possimus debitis laudantium aut libero quia, sit repellendus laboriosam molestiae itaque ullam magnam voluptatum repellat harum.</p>
+                                        </li>
+                                        <li>
+                                            <div class="bio-meta">
+                                                <a href="{% static 'doc/cv_placeholder.pdf' %}" class="cv" target="_blank">View CV</a>
+                                                <h4>Solomon Tesfay</h4>
+                                            </div>
+                                            <div class="bar"></div>
+                                            <p>Professional Engineer with a Masters in Structural Engineering from the University of Trento (Italy) and Masters in Construction Management from the University of Kansas (USA).</p>
+                                        </li>
+                                        <li>
+                                            <div class="bio-meta">
+                                                <a href="{% static 'doc/cv_placeholder.pdf' %}" class="cv" target="_blank">View CV</a>
+                                                <h4>John Doe</h4>
+                                            </div>
+                                            <div class="bar"></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta sed facere, autem quis nobis nisi veniam aliquam aliquid nemo libero, ipsum, facilis sequi. Aperiam a necessitatibus, inventore facilis repudiandae ducimus.</p>
+                                        </li>
+                                        <li>
+                                            <div class="bio-meta">
+                                                <a href="{% static 'doc/cv_placeholder.pdf' %}" class="cv" target="_blank">View CV</a>
+                                                <h4>John Doe</h4>
+                                            </div>
+                                            <div class="bar"></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta magnam harum veniam saepe, nesciunt, ad ea voluptatibus laudantium, sed ipsa fugiat, error velit similique incidunt blanditiis vel eaque provident recusandae!</p>
+                                        </li>
+                                        <li>
+                                            <div class="bio-meta">
+                                                <a href="{% static 'doc/cv_placeholder.pdf' %}" class="cv" target="_blank">View CV</a>
+                                                <h4>John Doe</h4>
+                                            </div>
+                                            <div class="bar"></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolores accusantium dolorem aspernatur laboriosam expedita ea nisi amet assumenda quidem, at maiores enim exercitationem, aliquam alias ut modi sint quisquam.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module" id="where_module" data-id="2">
+                        <div id="vmap"><img src="{% static 'img/placeholder.png' %}" data-id="states" id="load_map_png" alt="states"></div>
+                    </div>
+                </div>
+                <div class="container" id="about_menu">
+                    <div class="row hidden-phone">
+                        <div class="span12">
+                            <ul>
+                                <li class="active" id="what" data-id="0"><span>1 /</span>&nbsp;What We do</li><li
+                                id="who" data-id="1"><span>2 /</span>&nbsp;Who We Are</li>
+                                <!-- <li id="where" data-id="2"><span>3 /</span>&nbsp;Where We Work</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="hidden-desktop">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12 section-header">
+                            <span class="title-bar"></span>
+                            <h1>Our Team</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="team-accordion" class="accordion">
+                  <header>
+                      <h3>Solomon Tesefaye</h3>
+                      <small>Senior Structural Engineer</small>
+                      <div class="action-icon">
+                         <span class="fa fa-plus"></span>
+                      </div>
+                  </header>
+                  <div>
+                   <div id="team-img-container">
+                      <img class="team-img" src="{% static 'img/john_doe_avatar.png' %}" alt="John Doe">
+                   </div>
+                   <p>Our structural engineers look beyond the obvious to explore alternatives in search of the approach best suited to each project. Our solution-focused design approach uses sophisticated methods to conceptualize, model and deliver integrated designs that benefit all project stakeholders.</p>
+                  </div>
+
+                  <header>
+                    <h3>John Doe</h3>
+                    <small>Architect</small>
+                    <div class="action-icon">
+                         <span class="fa fa-plus"></span>
+                      </div>
+                  </header>
+                  <div>
+                   <div id="team-img-container">
+                      <img class="team-img" src="{% static 'img/john_doe_avatar.png' %}" alt="John Doe">
+                   </div>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ratione, omnis iusto, perspiciatis sed praesentium, maxime debitis in hic quae optio commodi tenetur quod cupiditate repudiandae doloremque mollitia architecto nostrum.</p>
+                  </div>
+
+                  <header>
+                    <h3>John Doe</h3>
+                    <small>Electrical Engineer</small>
+                    <div class="action-icon">
+                         <span class="fa fa-plus"></span>
+                      </div>
+                  </header>
+                  <div>
+                   <div id="team-img-container">
+                      <img class="team-img" src="{% static 'img/john_doe_avatar.png' %}" alt="John Doe">
+                   </div>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ratione, omnis iusto, perspiciatis sed praesentium, maxime debitis in hic quae optio commodi tenetur quod cupiditate repudiandae doloremque mollitia architecto nostrum.</p>
+                  </div>
+
+                  <header>
+                    <h3>Jane Doe</h3>
+                    <small>Contract Admin Engineer</small>
+                    <div class="action-icon">
+                         <span class="fa fa-plus"></span>
+                    </div>
+                  </header>
+                  <div>
+                   <div id="team-img-container">
+                      <img class="team-img" src="{% static 'img/john_doe_avatar.png' %}" alt="John Doe">
+                   </div>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, quidem, explicabo. Debitis temporibus hic unde commodi ipsam, rem ab nihil cum doloribus magnam cumque totam itaque nobis natus ex optio.</p>
+                  </div>
+
+                  
+                </div><!-- /.accrdion -->
+            </div>
+
+            <section id="process">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12 section-header">
+                            <span class="title-bar"></span>
+                            <h1>Process</h1>
+                        </div>
+                    </div>
+                    <div class="row tiles">
+                        <div class="process-item">
+                            <div class="tile">
+                                <h2>We deliver<br>the model</h2>
+                                <div class="symbol">
+                                    <!-- <img src="static/img/placeholder.png" data-id="process_mag" class="load-png-or-svg" alt="magnifying glass"> -->
+                                    <i class="fa fa-cubes"></i>
+                                </div>
+                            </div>
+                            <!-- <h3>Initial Discovery &#8212;</h3> -->
+                            <p>We routinely share our models with owners, architects, contractors and fabricators because we believe this is the best way to clearly communicate project information. We use building information modeling (BIM) on every project, so our designs “live” in 3D models.</p>
+                        </div>
+                        <div class="process-item">
+                            <div class="tile">
+                                <h2>We are<br>software agnostic</h2>
+                                <div class="symbol">
+                                    <!-- <img src="static/img/placeholder.png" data-id="process_ruler" class="load-png-or-svg" alt="ruler"> -->
+                                     <i class="material-icons">desktop_mac</i>
+                                </div>
+                            </div>
+                            <!-- <h3>Research Synthesis &#8212;</h3> -->
+                            <p>Sap2000 and ETABS are our preferred design tools, but we have in-house interoperability systems that enable us to work in, or translate from and to, any design package.</p>
+                        </div>
+                        <div class="process-item">
+                            <div class="tile">
+                                <h2>We deliver<br>customized projects</h2>
+                                <div class="symbol">
+                                    <!-- <img src="static/img/placeholder.png" data-id="process_tools" class="load-png-or-svg" alt="tools"> -->
+                                    <!-- <i class="fa fa-wrench"></i> -->
+                                    <i class="material-icons">extension</i>
+                                </div>
+                            </div>
+                            <!-- <h3>Final Recommendation &#8212;</h3> -->
+                            <p>Every project presents a unique combination of priorities and constraints, from sequence of construction to budget and schedule. We create customized project delivery strategies, choosing from among our construction engineering services to meet the specific needs of each project and client.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services">
+                <div class="relative hidden-phone">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span12 section-header">
+                                <span class="title-bar"></span>
+                                <h1>Services</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content hover">
+                        <div class="banner">
+                            <div class="container">
+                                <div id="counter">
+                                    <div>0</div>
+                                    <div class="flexslider">
+                                        <ul class="slides">
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>5</li>
+                                            <li>6</li>
+                                        </ul>
+                                    </div>
+                                    <div>/</div>
+                                </div>
+                                <div class="flexslider" id="list">
+                                    <ul class="slides">
+                                        <li>
+                                            <h2>Structural Design for New Buildings</h2>
+                                            <span>
+                                                <p>Our structural engineers look beyond the obvious to explore alternatives in search of the approach best suited to each project. Our solution-focused design approach uses sophisticated methods to conceptualize, model and deliver integrated designs that benefit all project stakeholders.</p>
+                                                <p>We offer structural engineering expertise for buildings of all types and sizes, including commercial, cultural, institutional, educational, government, healthcare, hospitality , residential, special structures, sports and public assembly.</p>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <h2>Structural Design for Building Expansions</h2>
+                                            <span>
+                                                <p>When construction ends, a building’s life cycle is just beginning; its uses, functions, technologies and requirements will change over time. Our structural engineers perform design for major additions and expansions to existing buildings of every type, size and vintage. These projects can breathe new life into an old structure, providing a new look and improved functionality, as well as more space.</p>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <h2>Structural Peer &amp; Constructability Review</h2>
+                                            <span>
+                                                <p>We conduct peer reviews in the same manner that we would want others to review our designs – by offering informed observations and constructive suggestions as helpful, professional colleagues. Our approach to peer review services applies lessons learned from engineering new buildings, investigating failures and renewing existing structures. We understand the key issues for each building type, and focus on those issues in our reviews.</p>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <h2>Performance-Based Seismic Design</h2>
+                                            <span>
+                                                <p>For buildings of unconventional size, shape, structural system or function in high- seismic areas, code provisions written for typical structures may be inefficient, uneconomical or inappropriate. Performance-based design (PBD) is often a better approach. We start by working with clients to establish project-specific operational or performance criteria and determine appropriate loading events. Then we apply advanced analytical techniques, such as nonlinear and time-history analysis, toconfirm that criteria are met or to highlight optimal approaches for subsequent design cycles. The result is a building that better addresses key performance goals.</p>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <h2>Value Engineering</h2>
+                                            <span>
+                                                <p>More than one reasonable, safe and acceptable solution can often be applied to a particular design. Value engineering asks: “Which acceptable solution is most economical?” This process also poses the more challenging question: “Does an entirely different and better approach exist?” To answer both questions effectively, depth and breadth of experience is required. Our structural design professionals are technically advanced and well versed in a wide variety of project types, materials and construction methods, and so are able to offer value engineering recommendations for any project.</p>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <h2>Construction Management</h2>
+                                            <span>
+                                                <p>Comprehensive management of every stage of the project, beginning with the original concept and project definition that yields the greatest benefits to the owner. We can represent the owner by helping select the design and construction teams and managing the design (preventing scope creep) so as to stay within a predetermined budget with value engineering, cost-benefit analysis and best-value comparisons.</p>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="navigation">
+                                    <div class="arrow" data-id="next">
+                                        <img src="{% static 'img/placeholder.png' %}" data-id="services_arrow_rt" class="load-png-or-svg" alt="right arrow">
+                                        <img src="{% static 'img/placeholder.png' %}" data-id="services_arrow_rt_hover" class="load-png-or-svg" alt="right arrow hover">
+                                    </div>
+                                    <div class="arrow" data-id="prev">
+                                        <img src="{% static 'img/placeholder.png' %}" data-id="services_arrow_lt" class="load-png-or-svg" alt="left arrow">
+                                        <img src="{% static 'img/placeholder.png' %}" data-id="services_arrow_lt_hover" class="load-png-or-svg" alt="left arrow hover">
+                                    </div>
+                                    <div class="close">
+                                        <img src="{% static 'img/placeholder.png' %}" data-id="services_x" class="load-png-or-svg" alt="close">
+                                        <img src="{% static 'img/placeholder.png' %}" data-id="services_x_hover" class="load-png-or-svg" alt="close hover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container tiles">
+                            <div class="row hidden-phone" >
+                                <div class="tile" data-id="0">
+                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
+                                    <div>
+                                        <p>01 /</p>
+                                        <h2>Structural Design For New Buildings</h2>
+                                    </div>
+                                </div>
+                                <div class="tile" data-id="1">
+                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
+                                    <div>
+                                        <p>02 /</p>
+                                        <h2>Structural Design for Building Expansions</h2>
+                                    </div>
+                                </div>
+                                <div class="tile" data-id="2">
+                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
+                                    <div>
+                                        <p>03 /</p>
+                                        <h2>Structural Peer &amp; Constructability Review</h2>
+                                    </div>
+                                </div>
+                                <div class="tile" data-id="3">
+                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
+                                    <div>
+                                        <p>04 /</p>
+                                        <h2>Performance-Based Seismic Design</h2>
+                                    </div>
+                                </div>
+                                <div class="tile" data-id="4">
+                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
+                                    <div>
+                                        <p>05 /</p>
+                                        <h2>Value <br>Engineering</h2>
+                                    </div>
+                                </div>
+                                <div class="tile" data-id="5">
+                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
+                                    <div>
+                                        <p>06 /</p>
+                                        <h2>Construction Management</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden-desktop">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span12 section-header">
+                                <span class="title-bar"></span>
+                                <h1>Services</h1>
+                            </div>
+                        </div>
+
+                        <div id="service-accordion" class="accordion">
+                          <h3><i class="fa fa-chevron-right"></i> Structural Design for New Buildings</h3>
+                          <div>
+                           <p>Our structural engineers look beyond the obvious to explore alternatives in search of the approach best suited to each project. Our solution-focused design approach uses sophisticated methods to conceptualize, model and deliver integrated designs that benefit all project stakeholders.</p>
+                           <p>We offer structural engineering expertise for buildings of all types and sizes, including commercial, cultural, institutional, educational, government, healthcare, hospitality , residential, special structures, sports and public assembly.</p>
+                          </div>
+
+                          <h3><i class="fa fa-chevron-right"></i> Structural Design for Building Expansions</h3>
+                          <div>
+                            <p>When construction ends, a building’s life cycle is just beginning; its uses, functions, technologies and requirements will change over time. Our structural engineers perform design for major additions and expansions to existing buildings of every type, size and vintage. These projects can breathe new life into an old structure, providing a new look and improved functionality, as well as more space.</p>
+                          </div>
+
+                          <h3><i class="fa fa-chevron-right"></i> Structural Peer &amp; Constructability Review</h3>
+                          <div>
+                            <p>We conduct peer reviews in the same manner that we would want others to review our designs – by offering informed observations and constructive suggestions as helpful, professional colleagues. Our approach to peer review services applies lessons learned from engineering new buildings, investigating failures and renewing existing structures. We understand the key issues for each building type, and focus on those issues in our reviews.</p>
+                          </div>
+
+                          <h3><i class="fa fa-chevron-right"></i> Performance-Based Seismic Design</h3>
+                          <div>
+                            <p>For buildings of unconventional size, shape, structural system or function in high- seismic areas, code provisions written for typical structures may be inefficient, uneconomical or inappropriate. Performance-based design (PBD) is often a better approach. We start by working with clients to establish project-specific operational or performance criteria and determine appropriate loading events. Then we apply advanced analytical techniques, such as nonlinear and time-history analysis, toconfirm that criteria are met or to highlight optimal approaches for subsequent design cycles. The result is a building that better addresses key performance goals.</p>
+                          </div>
+
+                          <h3><i class="fa fa-chevron-right"></i> Value Engineering</h3>
+                          <div>
+                            <p>More than one reasonable, safe and acceptable solution can often be applied to a particular design. Value engineering asks: “Which acceptable solution is most economical?” This process also poses the more challenging question: “Does an entirely different and better approach exist?” To answer both questions effectively, depth and breadth of experience is required. Our structural design professionals are technically advanced and well versed in a wide variety of project types, materials and construction methods, and so are able to offer value engineering recommendations for any project.</p>
+                          </div>
+                          
+                          <h3><i class="fa fa-chevron-right"></i> Construction Management</h3>
+                          <div>
+                            <p>Comprehensive management of every stage of the project, beginning with the original concept and project definition that yields the greatest benefits to the owner. We can represent the owner by helping select the design and construction teams and managing the design (preventing scope creep) so as to stay within a predetermined budget with value engineering, cost-benefit analysis and best-value comparisons.</p>
+                          </div>
+                        </div><!-- /#accrdion -->
+                    </div><!-- /.container -->
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12 section-header">
+                            <span class="title-bar"></span>
+                            <h1>Contact</h1>
+                        </div>
+                    </div>
+                </div>
+                <div id="map_canvas"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="span4">
+                            <h3>Get in touch &#8212;</h3>
+                            <p>+251 929 179 668</p>
+                            <p><a href="mailto:sol.tesfay@gmail.com">sol.tesfay@gmail.com</a></p>
+                            <ul class="list-inline social-media-icons">
+                                <li><a href="#" title="Facebook"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="#" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#" title="Linkedin"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li><a href="#" title="Twitter"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            
+                        </div>
+                        <div class="span4">
+                            <h3>Visit us &#8212;</h3>
+                            <p>Ayat Village</p>
+                            <p>Yeka Sub-city</p>
+                            <p>Addis Ababa, Ethiopia</p>
+                            <a href="#" target="_blank" id="directions">Get Directions</a>
+                        </div>
+                        <div class="span4">
+                            <h3>Latest Tweet From Us &#8212;</h3>
+                            <div>
+                                <a class="twitter-timeline"
+                                   data-width="640" 
+                                   data-height="320" 
+                                   data-theme="dark" 
+                                   data-chrome="nofooter noheader transparent noborders" 
+                                   data-tweet-limit="1" 
+                                   href="https://twitter.com/hashtag/HappyNewYear2018" data-widget-id="945082809684758529">Latest Tweets</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <p class="text-center text-fade small">&copy; 2018. Solomon Engineering Group. All Rights Reserved. Developed by <a href="http://eyobofficial.github.io/" target="_blank">EyobOfficial</a><p>
+            </footer>
+        </div>
+        <div id="ipad_spacer"></div>
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="{% static 'js/lib/jquery-3.2.1.min.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+        <!-- jQuery UI -->
+        <script type="text/javascript" src="{% static 'js/lib/jquery-ui.min.js' %}"></script>
+
+        <!-- Custom Scripts -->
+        <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
+        <!-- Google Scripts -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDIZAHg9AQXoWIIA97OjaIjTGyIvW2xDyU&amp;sensor=false"></script>
+    </body>
+</html>
