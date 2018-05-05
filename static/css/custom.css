@@ -1,0 +1,165 @@
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-fade {
+    color: #7F7F7F;
+}
+
+.text-fade > a {
+    color: #ccc;
+}
+
+.small. .small > a {
+    font-size: 11px;
+}
+
+ul.list-inline li {
+    display: inline-block;
+    margin-right: 1.4em;
+}
+
+.social-media-icons {
+    margin-top: 12px;
+}
+
+.social-media-icons .fa {
+    font-size: 30px;
+}
+
+.social-media-icons a {
+    color: #7F7F7F !important;
+}
+
+.social-media-icons a:hover {
+    color: #963947 !important;
+}
+
+.symbol .material-icons, .symbol .fa {
+    font-size: 100px;
+    font-weight: lighter;
+    color: #963947;
+}
+
+.border-red {
+    border: 1px solid red;
+}
+
+.border-gold {
+    border: 1px solid gold;
+}
+
+.hide {
+    display: none !important;
+}
+
+/************ Service Accordion Section **************/
+.accordion {
+    margin-top: 0 !important;
+    margin-bottom: 1.8em;
+}
+
+.accordion h3 {
+    margin-top: 1em;
+}
+
+.accordion:first-child h3 {
+    margin-top: 0 !important;
+}
+
+.accordion .ui-accordion-header {
+    margin-top: 1em;
+    border-radius: 0;
+    padding: 0.8em 0.4em 0.8em 0.8em;
+}
+
+.accordion .ui-accordion-header:hover {
+    background-color: #963947;
+    border: 1px solid #aa4455;
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion .ui-accordion-header-active {
+    background-color: #963947;
+    border: 1px solid #aa4455;
+    color: inherit;
+}
+
+.accordion .ui-accordion-content-active {
+    text-align: justify;
+    background-color: #232323;
+    border: none;
+    padding: 12px;
+}
+
+/************* Team Accordion ****************/
+#team-accordion .ui-accordion-header {
+    position: relative;
+    padding: 0.1em 0.4em 0.8em 0.8em;
+}
+
+#team-accordion h3 {
+    width: 60%;
+    color: inherit;
+    line-height: 1.2em;
+}
+
+#team-accordion small {
+    color: #7f7f7f;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#team-accordion div.action-icon {
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+    right: 20px;
+}
+
+#team-accordion div.action-icon .fa {
+    font-size: 18px;
+}
+
+/************* Team Img ******************/
+.team-img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 2em auto;
+    border-radius: 50%;
+}
+
+/*********** Staff Heading ****************/
+
+
+/****************** Mobile Logo ******************/
+#mobile-banner img {
+    display: block;
+    width: 80%;
+    margin: 25% auto 60px;
+}
+
+#mobile-banner h1 {
+    width: 80%;
+    margin: 0 auto 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 36px;
+    text-transform: uppercase;
+    font-family: "ff-din-web-pro", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    border-bottom: 1px solid #7F7F7F;
+}
+

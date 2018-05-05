@@ -1,0 +1,18 @@
+# Virtual Enviroments
+.venv
+env
+venv
+myvenv
+
+# Python Decouple Configs
+.env
+
+# Cache Files
+__pycache__
+*.pyc
+
+# Tempory files
+temp/*
+
+# Media files
+media/*
