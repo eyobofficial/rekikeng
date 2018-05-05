@@ -12,3 +12,7 @@ class CustomUserModel(admin.ModelAdmin):
 class CompanyAdmin(admin.ModelAdmin):
     list_display = ['name', ]
 
+
+@admin.register(models.Slide)
+class SlideAdmin(admin.ModelAdmin):
+    list_display = ['title', ]

@@ -84,67 +84,24 @@
             </object> -->
 
             <ul class="slides">
-                <li data-id="0">
+                {% for slide in slide_list %}
+                <li data-id="{{ forloop.counter0 }}">
                     <div class="image">
-                        <img src="{% static 'img/placeholder.png' %}" data-id="01_structural_design" class="load-jpg" alt="blueprints">
+                        {% if slide.wallpaper.url %}
+                        <img src="{{ slide.wallpaper }}" alt="{{ slide.short_title }}">
+                        {% else %}
+                        <img src="{% static 'img/placeholder.png' %}" alt="{{ slide.title }}">
+                        {% endif %}
                     </div>
                     <div class="content">
                         <div class="top-bar"></div>
                         <div class="titles">
-                            <h3>Structural Design</h3>
-                            <h4>Solution-focused approach to deliver integrated designs for your new and existing buildings.</h4>
+                            <h3>{{ slide.title }}</h3>
+                            <h4>{{ slide.description }}</h4>
                         </div>
                     </div>
                 </li>
-                <li data-id="1">
-                    <div class="image">
-                        <img src="{% static 'img/placeholder.png' %}" data-id="02_seismic_design" class="load-jpg" alt="team">
-                    </div>
-                    <div class="content">
-                        <div class="top-bar"></div>
-                        <div class="titles">
-                            <h3>Seismic Design</h3>
-                            <h4>Design buildings that addresses key performance goals.</h4>
-                        </div>
-                    </div>
-                </li>
-                <li data-id="2">
-                    <div class="image">
-                        <img src="{% static 'img/placeholder.png' %}" data-id="03_structural_review" class="load-jpg" alt="books">
-                    </div>
-                    <div class="content">
-                        <div class="top-bar"></div>
-                        <div class="titles">
-                            <h3>Structural Peer Review</h3>
-                            <h4>Scientific observations and constructive suggestions.</h4>
-                        </div>
-                    </div>
-                </li>
-                <li data-id="3">
-                    <div class="image">
-                        <img src="{% static 'img/placeholder.png' %}" data-id="04_value_engineering" class="load-jpg" alt="office">
-                    </div>
-                    <div class="content">
-                        <div class="top-bar"></div>
-                        <div class="titles">
-                            <h3>Value Engineering</h3>
-                            <h4>Optimized structural designs throughout the design process.</h4>
-                        </div>
-                    </div>
-                </li>
-                
-                <li data-id="4">
-                    <div class="image">
-                        <img src="{% static 'img/placeholder.png' %}" data-id="05_project_managment" class="load-jpg" alt="ruler">
-                    </div>
-                    <div class="content">
-                        <div class="top-bar"></div>
-                        <div class="titles">
-                            <h3>Construction Management</h3>
-                            <h4>Comprehensive management of every stage of the project.</h4>
-                        </div>
-                    </div>
-                </li>
+                {% endfor %}
             </ul>
         </div>
         <div id="blueprints">

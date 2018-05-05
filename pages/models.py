@@ -60,11 +60,23 @@ class Company(Base):
         return self.name
 
 
-class Services(Base):
-    full_title = models.CharField(max_length=120)
-    short_title = models.CharField(max_length=100)
-    tagline = models.CharField(max_length=255, blank=True)
-    description = models.TextField()
+def service_wallpaper_path(instance, filename):
+    ext = filename.split('.')[-1]
+    wallpaper_name = instance.title.lower().replace(' ', '_')
+    return 'static/img/slides/{}.{}'.format(wallpaper_name, ext)
+
+
+class Slide(Base):
+    title = models.CharField(max_length=120)
+    description = models.TextField(
+        max_length=255,
+        blank=True,
+        help_text='Short description with less than 255 letters.'
+    )
+    wallpaper = models.ImageField(
+        upload_to=service_wallpaper_path,
+        help_text='Upload a 1440x960 pixel .jpg image.'
+    )
 
     def __str__(self):
-        return self.short_title
+        return self.title
