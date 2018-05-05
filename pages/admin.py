@@ -1,3 +1,14 @@
 from django.contrib import admin
+from . import models
 
-# Register your models here.
+
+@admin.register(models.CustomUser)
+class CustomUserModel(admin.ModelAdmin):
+    list_display = ['username', ]
+    filter_horizontal = ['groups', ]
+
+
+@admin.register(models.Company)
+class CompanyAdmin(admin.ModelAdmin):
+    list_display = ['name', ]
+

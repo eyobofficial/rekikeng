@@ -19,5 +19,10 @@ from django.urls import path
 
 urlpatterns = [
     path('', page_views.IndexView.as_view(), name='index'),
-    path('admin/', admin.site.urls),
+    path('rekik-admin/', admin.site.urls),
 ]
+
+
+# Change Admin Site Header and Title Caption
+admin.site.site_header = 'Rekik Engineering'
+admin.site.site_title = 'Rekik Engineering'
