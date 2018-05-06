@@ -108,6 +108,18 @@ class Staff(Base):
         return self.full_name
 
 
+class Process(Base):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    picture = models.ImageField(upload_to='static/img/process/')
+
+    class Meta:
+        verbose_name_plural = 'Process'
+
+    def __str__(self):
+        return self.title
+
+
 class Service(Base):
     """
     Abstracts a Service object provided by the Company

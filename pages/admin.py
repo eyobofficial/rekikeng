@@ -24,6 +24,12 @@ class StaffAdmin(admin.ModelAdmin):
     search_fields = ['full_name', 'position', 'bio', ]
 
 
+@admin.register(models.Process)
+class ProcessAdmin(admin.ModelAdmin):
+    list_display = ['title', ]
+    search_fields = ['title', 'description', ]
+
+
 @admin.register(models.Service)
 class ServiceAdmin(admin.ModelAdmin):
     list_display = ['title', ]
