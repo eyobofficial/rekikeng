@@ -6,7 +6,6 @@
     
 <head>
         <title>{{ company.name }}</title>
-
         <!-- Meta -->
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -79,9 +78,6 @@
         </section>
 
         <div id="home" class="flexslider hidden-phone">
-            <!-- <object data="static/img/placeholder.png" data-id="logo" type="image/svg+xml" id="load_mobile_svg" class="logo">
-                <img src="static/img/placeholder.png" data-id="logo" id="load_mobile_png" class="logo" alt="dga logo">
-            </object> -->
 
             <ul class="slides">
                 {% for slide in slide_list %}
@@ -260,55 +256,23 @@
                                     <div>0</div>
                                     <div class="flexslider">
                                         <ul class="slides">
-                                            <li>1</li>
-                                            <li>2</li>
-                                            <li>3</li>
-                                            <li>4</li>
-                                            <li>5</li>
-                                            <li>6</li>
+                                            {% for service in service_list %}
+                                            <li>{{ forloop.counter }}</li>
+                                            {% endfor %}
                                         </ul>
                                     </div>
                                     <div>/</div>
                                 </div>
                                 <div class="flexslider" id="list">
                                     <ul class="slides">
+                                        {% for service in service_list %}
                                         <li>
-                                            <h2>Structural Design for New Buildings</h2>
+                                            <h2>{{ service.title }}</h2>
                                             <span>
-                                                <p>Our structural engineers look beyond the obvious to explore alternatives in search of the approach best suited to each project. Our solution-focused design approach uses sophisticated methods to conceptualize, model and deliver integrated designs that benefit all project stakeholders.</p>
-                                                <p>We offer structural engineering expertise for buildings of all types and sizes, including commercial, cultural, institutional, educational, government, healthcare, hospitality , residential, special structures, sports and public assembly.</p>
+                                                {{ service.description }}
                                             </span>
                                         </li>
-                                        <li>
-                                            <h2>Structural Design for Building Expansions</h2>
-                                            <span>
-                                                <p>When construction ends, a building’s life cycle is just beginning; its uses, functions, technologies and requirements will change over time. Our structural engineers perform design for major additions and expansions to existing buildings of every type, size and vintage. These projects can breathe new life into an old structure, providing a new look and improved functionality, as well as more space.</p>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <h2>Structural Peer &amp; Constructability Review</h2>
-                                            <span>
-                                                <p>We conduct peer reviews in the same manner that we would want others to review our designs – by offering informed observations and constructive suggestions as helpful, professional colleagues. Our approach to peer review services applies lessons learned from engineering new buildings, investigating failures and renewing existing structures. We understand the key issues for each building type, and focus on those issues in our reviews.</p>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <h2>Performance-Based Seismic Design</h2>
-                                            <span>
-                                                <p>For buildings of unconventional size, shape, structural system or function in high- seismic areas, code provisions written for typical structures may be inefficient, uneconomical or inappropriate. Performance-based design (PBD) is often a better approach. We start by working with clients to establish project-specific operational or performance criteria and determine appropriate loading events. Then we apply advanced analytical techniques, such as nonlinear and time-history analysis, toconfirm that criteria are met or to highlight optimal approaches for subsequent design cycles. The result is a building that better addresses key performance goals.</p>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <h2>Value Engineering</h2>
-                                            <span>
-                                                <p>More than one reasonable, safe and acceptable solution can often be applied to a particular design. Value engineering asks: “Which acceptable solution is most economical?” This process also poses the more challenging question: “Does an entirely different and better approach exist?” To answer both questions effectively, depth and breadth of experience is required. Our structural design professionals are technically advanced and well versed in a wide variety of project types, materials and construction methods, and so are able to offer value engineering recommendations for any project.</p>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <h2>Construction Management</h2>
-                                            <span>
-                                                <p>Comprehensive management of every stage of the project, beginning with the original concept and project definition that yields the greatest benefits to the owner. We can represent the owner by helping select the design and construction teams and managing the design (preventing scope creep) so as to stay within a predetermined budget with value engineering, cost-benefit analysis and best-value comparisons.</p>
-                                            </span>
-                                        </li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                                 <div id="navigation">
@@ -329,48 +293,19 @@
                         </div>
                         <div class="container tiles">
                             <div class="row hidden-phone" >
-                                <div class="tile" data-id="0">
+                                {% for service in service_list %}
+                                <div class="tile" data-id="{{ forloop.counter0 }}">
                                     <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
                                     <div>
-                                        <p>01 /</p>
-                                        <h2>Structural Design For New Buildings</h2>
+                                        {% if forloop.counter < 10 %}
+                                        <p>0{{ forloop.counter }} /</p>
+                                        {% else %}
+                                        <p>{{ forloop.counter }} /</p>
+                                        {% endif %}
+                                        <h2>{{ service.title }}</h2>
                                     </div>
                                 </div>
-                                <div class="tile" data-id="1">
-                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
-                                    <div>
-                                        <p>02 /</p>
-                                        <h2>Structural Design for Building Expansions</h2>
-                                    </div>
-                                </div>
-                                <div class="tile" data-id="2">
-                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
-                                    <div>
-                                        <p>03 /</p>
-                                        <h2>Structural Peer &amp; Constructability Review</h2>
-                                    </div>
-                                </div>
-                                <div class="tile" data-id="3">
-                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
-                                    <div>
-                                        <p>04 /</p>
-                                        <h2>Performance-Based Seismic Design</h2>
-                                    </div>
-                                </div>
-                                <div class="tile" data-id="4">
-                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
-                                    <div>
-                                        <p>05 /</p>
-                                        <h2>Value <br>Engineering</h2>
-                                    </div>
-                                </div>
-                                <div class="tile" data-id="5">
-                                    <img src="{% static 'img/placeholder.png' %}" data-id="services_plus" class="load-png-or-svg" alt="plus">
-                                    <div>
-                                        <p>06 /</p>
-                                        <h2>Construction Management</h2>
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -386,36 +321,12 @@
                         </div>
 
                         <div id="service-accordion" class="accordion">
-                          <h3><i class="fa fa-chevron-right"></i> Structural Design for New Buildings</h3>
+                          {% for service in service_list %}
+                          <h3><i class="fa fa-chevron-right"></i> {{ service.title }}</h3>
                           <div>
-                           <p>Our structural engineers look beyond the obvious to explore alternatives in search of the approach best suited to each project. Our solution-focused design approach uses sophisticated methods to conceptualize, model and deliver integrated designs that benefit all project stakeholders.</p>
-                           <p>We offer structural engineering expertise for buildings of all types and sizes, including commercial, cultural, institutional, educational, government, healthcare, hospitality , residential, special structures, sports and public assembly.</p>
+                           {{ service.description }}
                           </div>
-
-                          <h3><i class="fa fa-chevron-right"></i> Structural Design for Building Expansions</h3>
-                          <div>
-                            <p>When construction ends, a building’s life cycle is just beginning; its uses, functions, technologies and requirements will change over time. Our structural engineers perform design for major additions and expansions to existing buildings of every type, size and vintage. These projects can breathe new life into an old structure, providing a new look and improved functionality, as well as more space.</p>
-                          </div>
-
-                          <h3><i class="fa fa-chevron-right"></i> Structural Peer &amp; Constructability Review</h3>
-                          <div>
-                            <p>We conduct peer reviews in the same manner that we would want others to review our designs – by offering informed observations and constructive suggestions as helpful, professional colleagues. Our approach to peer review services applies lessons learned from engineering new buildings, investigating failures and renewing existing structures. We understand the key issues for each building type, and focus on those issues in our reviews.</p>
-                          </div>
-
-                          <h3><i class="fa fa-chevron-right"></i> Performance-Based Seismic Design</h3>
-                          <div>
-                            <p>For buildings of unconventional size, shape, structural system or function in high- seismic areas, code provisions written for typical structures may be inefficient, uneconomical or inappropriate. Performance-based design (PBD) is often a better approach. We start by working with clients to establish project-specific operational or performance criteria and determine appropriate loading events. Then we apply advanced analytical techniques, such as nonlinear and time-history analysis, toconfirm that criteria are met or to highlight optimal approaches for subsequent design cycles. The result is a building that better addresses key performance goals.</p>
-                          </div>
-
-                          <h3><i class="fa fa-chevron-right"></i> Value Engineering</h3>
-                          <div>
-                            <p>More than one reasonable, safe and acceptable solution can often be applied to a particular design. Value engineering asks: “Which acceptable solution is most economical?” This process also poses the more challenging question: “Does an entirely different and better approach exist?” To answer both questions effectively, depth and breadth of experience is required. Our structural design professionals are technically advanced and well versed in a wide variety of project types, materials and construction methods, and so are able to offer value engineering recommendations for any project.</p>
-                          </div>
-                          
-                          <h3><i class="fa fa-chevron-right"></i> Construction Management</h3>
-                          <div>
-                            <p>Comprehensive management of every stage of the project, beginning with the original concept and project definition that yields the greatest benefits to the owner. We can represent the owner by helping select the design and construction teams and managing the design (preventing scope creep) so as to stay within a predetermined budget with value engineering, cost-benefit analysis and best-value comparisons.</p>
-                          </div>
+                          {% endfor %}
                         </div><!-- /#accrdion -->
                     </div><!-- /.container -->
                 </div>
@@ -435,21 +346,21 @@
                     <div class="row">
                         <div class="span4">
                             <h3>Get in touch &#8212;</h3>
-                            <p>+251 929 179 668</p>
-                            <p><a href="mailto:sol.tesfay@gmail.com">sol.tesfay@gmail.com</a></p>
+                            <p>{{ company.phone }}</p>
+                            <p><a href="mailto:sol.tesfay@gmail.com">{{ company.email }}</a></p>
                             <ul class="list-inline social-media-icons">
-                                <li><a href="#" title="Facebook"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#" title="Linkedin"><i class="fa fa-linkedin-square"></i></a></li>
-                                <li><a href="#" title="Twitter"><i class="fa fa-twitter-square"></i></a></li>
+                                <li><a href="{{ company.facebook }}" title="Facebook"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="{{ company.instagram }}" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="{{ company.linkedin }}" title="Linkedin"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li><a href="{{ company.twitter }}" title="Twitter"><i class="fa fa-twitter-square"></i></a></li>
                             </ul>
                             
                         </div>
                         <div class="span4">
                             <h3>Visit us &#8212;</h3>
-                            <p>Ayat Village</p>
-                            <p>Yeka Sub-city</p>
-                            <p>Addis Ababa, Ethiopia</p>
+                            <p>{{ company.location }}</p>
+                            <p>{{ company.subcity }}</p>
+                            <p>{{ company.city }}, {{ company.country }}</p>
                             <a href="#" target="_blank" id="directions">Get Directions</a>
                         </div>
                         <div class="span4">
@@ -469,7 +380,7 @@
                 </div>
             </section>
             <footer>
-                <p class="text-center text-fade small">&copy; 2018. Solomon Engineering Group. All Rights Reserved. Developed by <a href="http://eyobofficial.github.io/" target="_blank">EyobOfficial</a><p>
+                <p class="text-center text-fade small">&copy; 2018. {{ company.name }}. All Rights Reserved. Developed by <a href="http://eyobofficial.github.io/" target="_blank">EyobOfficial</a><p>
             </footer>
         </div>
         <div id="ipad_spacer"></div>

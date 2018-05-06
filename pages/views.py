@@ -11,4 +11,5 @@ class IndexView(TemplateView):
         context['slide_list'] = models.Slide.objects.all()
         context['staff_list'] = models.Staff.objects.all()
         context['process_list'] = models.Process.objects.all()
+        context['service_list'] = models.Service.objects.all()
         return context
