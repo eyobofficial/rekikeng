@@ -16,3 +16,14 @@ class CompanyAdmin(admin.ModelAdmin):
 @admin.register(models.Slide)
 class SlideAdmin(admin.ModelAdmin):
     list_display = ['title', ]
+
+
+@admin.register(models.Staff)
+class StaffAdmin(admin.ModelAdmin):
+    list_display = ['full_name', 'position', ]
+    search_fields = ['full_name', 'position', 'bio', ]
+
+
+@admin.register(models.Service)
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ['title', ]

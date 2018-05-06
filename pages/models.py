@@ -60,7 +60,7 @@ class Company(Base):
         return self.name
 
 
-def service_wallpaper_path(instance, filename):
+def slide_path(instance, filename):
     ext = filename.split('.')[-1]
     wallpaper_name = instance.title.lower().replace(' ', '_')
     return 'static/img/slides/{}.{}'.format(wallpaper_name, ext)
@@ -74,9 +74,47 @@ class Slide(Base):
         help_text='Short description with less than 255 letters.'
     )
     wallpaper = models.ImageField(
-        upload_to=service_wallpaper_path,
+        upload_to=slide_path,
         help_text='Upload a 1440x960 pixel .jpg image.'
     )
 
     def __str__(self):
         return self.title
+
+
+def staff_avatar_path(instance, filename):
+    ext = filename.split('.')[-1]
+    avatar_name = instance.full_name.lower().replace(' ', '_')
+    return 'static/img/staffs/{}.{}'.format(avatar_name, ext)
+
+
+def staff_cv_path(instance, filename):
+    ext = filename.split('.')[-1]
+    cv_name = instance.full_name.lower().replace(' ', '_')
+    return 'static/doc/staffs/{}.{}'.format(cv_name, ext)
+
+
+class Staff(Base):
+    """
+    Abstracts staff members of the company
+    """
+    full_name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    bio = models.TextField('Short bio')
+    avatar = models.ImageField(upload_to=staff_avatar_path, blank=True)
+    cv = models.FileField(upload_to=staff_cv_path, blank=True)
+
+    def __str__(self):
+        return self.full_name
+
+
+class Service(Base):
+    """
+    Abstracts a Service object provided by the Company
+    """
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
+

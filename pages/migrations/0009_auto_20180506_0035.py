@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='service',
             name='wallpaper',
-            field=models.ImageField(height_field=960, upload_to=pages.models.service_wallpaper_path, width_field=1440),
+            field=models.ImageField(height_field=960, upload_to=pages.models.slide_path, width_field=1440),
         ),
     ]
