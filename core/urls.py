@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from pages import views as page_views
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 
 urlpatterns = [
     path('', page_views.IndexView.as_view(), name='index'),
     path('rekik-admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 # Change Admin Site Header and Title Caption

@@ -72,8 +72,8 @@
             <div class="container-fluid">
                 <div class="text-center">
                     <img src="{% static 'img/logo-bg.png' %}" class="mobile-logo" alt="Solomon Engineering Group">
-                    <h1>Solomon Engineering Group</h1>
-                    <p class="text-fade text-center small">The Right Thing, The First Time</p>
+                    <h1>{{ company.name }}</h1>
+                    <p class="text-fade text-center small">{{ company.tagline }}</p>
                 </div>
             </div>
         </section>
@@ -119,12 +119,12 @@
                     <div class="row">
                         <div class="span12 relative">
                             <blockquote>
-                                <p><i class="fa fa-quote-left"></i>&nbsp; Structural engineering is the art of molding materials we don't wholly understand, into shapes we can't fully analyze, so as to withstand forces we can't really assess, in such a way that the community at large has no reason to suspect the extent of our ignorance.&nbsp; <i class="fa fa-quote-right"></i></p>
-                                <small class="text-right">James E. Amrhein (Masonry Institute of America)</small>
+                                <p><i class="fa fa-quote-left"></i>&nbsp; {{ company.quote }}.&nbsp; <i class="fa fa-quote-right"></i></p>
+                                <small class="text-right">{{ company.quote_speaker }}</small>
                             </blockquote>
                             <br>
-                            <h3>We are a structural engineering company that strategically applies the benefits and best practices of new methods to enhance traditional design-bid-build projects.</h3>
-                            <p>Our embrace of advanced building information modeling technology and our collaborative, holistic approaches offer increased design and construction efficiency to solve several problems in contemporary construction such as low productivity and waste, time overruns, quality issues, and conflicts during construction among the key stakeholders of owner, architect and contractor.</p>
+                            <h3>{{ company.description1 }}</h3>
+                            <p>{{ company.description2 }}</p>
                         </div>
                     </div>
                 </div>
@@ -133,10 +133,15 @@
                         <div class="row">
                             <div class="span12" id="thumbnails">
                                 <ul>
-                                    <li data-id="1"><img src="static/img/john_doe_avatar.png" data-id="jack" alt="Solomon"></li><li
-                                    data-id="2"><img src="static/img/john_doe_avatar.png" data-id="dale" alt="John"></li><li
-                                    data-id="3"><img src="static/img/john_doe_avatar.png" data-id="brad" alt="John"></li><li
-                                    data-id="4"><img src="static/img/john_doe_avatar.png" data-id="marc" alt="John"></li>
+                                    {% for staff in staff_list %}
+                                    <li data-id="{{ forloop.counter }}">
+                                        {% if staff.avatar %}
+                                        <img src="{{ staff.avatar.url }}" alt="{{ staff.full_name }}">
+                                        {% else %}
+                                        <img src="{% static 'img/john_doe_avatar.png' %}" data-id="dale" alt="John">
+                                        {% endif %}
+                                    </li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
@@ -149,56 +154,31 @@
                                                 <h4>The Team</h4>
                                             </div>
                                             <div class="bar"></div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nihil fugiat vel magni vitae possimus debitis laudantium aut libero quia, sit repellendus laboriosam molestiae itaque ullam magnam voluptatum repellat harum.</p>
+                                            <p>{{ company.team_description }}</p>
                                         </li>
+                                        {% for staff in staff_list %}
                                         <li>
                                             <div class="bio-meta">
-                                                <a href="{% static 'doc/cv_placeholder.pdf' %}" class="cv" target="_blank">View CV</a>
-                                                <h4>Solomon Tesfay</h4>
+                                                {% if staff.cv %}
+                                                <a href="{{ staff.cv.url }}" class="cv" target="_blank">View CV</a>
+                                                {% endif %}
+                                                <h4>{{ staff.full_name }}</h4>
                                             </div>
                                             <div class="bar"></div>
-                                            <p>Professional Engineer with a Masters in Structural Engineering from the University of Trento (Italy) and Masters in Construction Management from the University of Kansas (USA).</p>
+                                            <p>{{ staff.bio  }}</p>
                                         </li>
-                                        <li>
-                                            <div class="bio-meta">
-                                                <a href="{% static 'doc/cv_placeholder.pdf' %}" class="cv" target="_blank">View CV</a>
-                                                <h4>John Doe</h4>
-                                            </div>
-                                            <div class="bar"></div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta sed facere, autem quis nobis nisi veniam aliquam aliquid nemo libero, ipsum, facilis sequi. Aperiam a necessitatibus, inventore facilis repudiandae ducimus.</p>
-                                        </li>
-                                        <li>
-                                            <div class="bio-meta">
-                                                <a href="{% static 'doc/cv_placeholder.pdf' %}" class="cv" target="_blank">View CV</a>
-                                                <h4>John Doe</h4>
-                                            </div>
-                                            <div class="bar"></div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta magnam harum veniam saepe, nesciunt, ad ea voluptatibus laudantium, sed ipsa fugiat, error velit similique incidunt blanditiis vel eaque provident recusandae!</p>
-                                        </li>
-                                        <li>
-                                            <div class="bio-meta">
-                                                <a href="{% static 'doc/cv_placeholder.pdf' %}" class="cv" target="_blank">View CV</a>
-                                                <h4>John Doe</h4>
-                                            </div>
-                                            <div class="bar"></div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolores accusantium dolorem aspernatur laboriosam expedita ea nisi amet assumenda quidem, at maiores enim exercitationem, aliquam alias ut modi sint quisquam.</p>
-                                        </li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="module" id="where_module" data-id="2">
-                        <div id="vmap"><img src="{% static 'img/placeholder.png' %}" data-id="states" id="load_map_png" alt="states"></div>
                     </div>
                 </div>
                 <div class="container" id="about_menu">
                     <div class="row hidden-phone">
                         <div class="span12">
                             <ul>
-                                <li class="active" id="what" data-id="0"><span>1 /</span>&nbsp;What We do</li><li
-                                id="who" data-id="1"><span>2 /</span>&nbsp;Who We Are</li>
-                                <!-- <li id="where" data-id="2"><span>3 /</span>&nbsp;Where We Work</li> -->
+                                <li class="active" id="what" data-id="0"><span>1 /</span>&nbsp;What We do</li><li id="who" data-id="1"><span>2 /</span>&nbsp;Who We Are</li>
                             </ul>
                         </div>
                     </div>
@@ -216,63 +196,25 @@
                 </div>
 
                 <div id="team-accordion" class="accordion">
+                {% for staff in staff_list %}
                   <header>
-                      <h3>Solomon Tesefaye</h3>
-                      <small>Senior Structural Engineer</small>
+                      <h3>{{ staff.full_name }}</h3>
+                      <small>{{ staff.position }}</small>
                       <div class="action-icon">
                          <span class="fa fa-plus"></span>
                       </div>
                   </header>
                   <div>
                    <div id="team-img-container">
-                      <img class="team-img" src="{% static 'img/john_doe_avatar.png' %}" alt="John Doe">
+                      {% if staff.avatar %}
+                      <img class="team-img" src="{{ staff.avatar.url }}" alt="{{ staff.full_name }}">
+                      {% else %}
+                      <img class="team-img" src="{% static 'img/john_doe_avatar.png' %}" alt="{{ staff.full_name }}">
+                      {% endif %}
                    </div>
-                   <p>Our structural engineers look beyond the obvious to explore alternatives in search of the approach best suited to each project. Our solution-focused design approach uses sophisticated methods to conceptualize, model and deliver integrated designs that benefit all project stakeholders.</p>
+                   <p>{{ staff.bio }}</p>
                   </div>
-
-                  <header>
-                    <h3>John Doe</h3>
-                    <small>Architect</small>
-                    <div class="action-icon">
-                         <span class="fa fa-plus"></span>
-                      </div>
-                  </header>
-                  <div>
-                   <div id="team-img-container">
-                      <img class="team-img" src="{% static 'img/john_doe_avatar.png' %}" alt="John Doe">
-                   </div>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ratione, omnis iusto, perspiciatis sed praesentium, maxime debitis in hic quae optio commodi tenetur quod cupiditate repudiandae doloremque mollitia architecto nostrum.</p>
-                  </div>
-
-                  <header>
-                    <h3>John Doe</h3>
-                    <small>Electrical Engineer</small>
-                    <div class="action-icon">
-                         <span class="fa fa-plus"></span>
-                      </div>
-                  </header>
-                  <div>
-                   <div id="team-img-container">
-                      <img class="team-img" src="{% static 'img/john_doe_avatar.png' %}" alt="John Doe">
-                   </div>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ratione, omnis iusto, perspiciatis sed praesentium, maxime debitis in hic quae optio commodi tenetur quod cupiditate repudiandae doloremque mollitia architecto nostrum.</p>
-                  </div>
-
-                  <header>
-                    <h3>Jane Doe</h3>
-                    <small>Contract Admin Engineer</small>
-                    <div class="action-icon">
-                         <span class="fa fa-plus"></span>
-                    </div>
-                  </header>
-                  <div>
-                   <div id="team-img-container">
-                      <img class="team-img" src="{% static 'img/john_doe_avatar.png' %}" alt="John Doe">
-                   </div>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, quidem, explicabo. Debitis temporibus hic unde commodi ipsam, rem ab nihil cum doloribus magnam cumque totam itaque nobis natus ex optio.</p>
-                  </div>
-
-                  
+                {% endfor %}              
                 </div><!-- /.accrdion -->
             </div>
 
@@ -285,40 +227,18 @@
                         </div>
                     </div>
                     <div class="row tiles">
+                        {% for process in process_list %}
                         <div class="process-item">
                             <div class="tile">
-                                <h2>We deliver<br>the model</h2>
+                                <h2>{{ process.title }}</h2>
                                 <div class="symbol">
                                     <!-- <img src="static/img/placeholder.png" data-id="process_mag" class="load-png-or-svg" alt="magnifying glass"> -->
-                                    <i class="fa fa-cubes"></i>
+                                    {% autoescape off %}{{ process.icon }}{% endautoescape %}
                                 </div>
                             </div>
-                            <!-- <h3>Initial Discovery &#8212;</h3> -->
-                            <p>We routinely share our models with owners, architects, contractors and fabricators because we believe this is the best way to clearly communicate project information. We use building information modeling (BIM) on every project, so our designs “live” in 3D models.</p>
+                            <p>{{ process.description }}</p>
                         </div>
-                        <div class="process-item">
-                            <div class="tile">
-                                <h2>We are<br>software agnostic</h2>
-                                <div class="symbol">
-                                    <!-- <img src="static/img/placeholder.png" data-id="process_ruler" class="load-png-or-svg" alt="ruler"> -->
-                                     <i class="material-icons">desktop_mac</i>
-                                </div>
-                            </div>
-                            <!-- <h3>Research Synthesis &#8212;</h3> -->
-                            <p>Sap2000 and ETABS are our preferred design tools, but we have in-house interoperability systems that enable us to work in, or translate from and to, any design package.</p>
-                        </div>
-                        <div class="process-item">
-                            <div class="tile">
-                                <h2>We deliver<br>customized projects</h2>
-                                <div class="symbol">
-                                    <!-- <img src="static/img/placeholder.png" data-id="process_tools" class="load-png-or-svg" alt="tools"> -->
-                                    <!-- <i class="fa fa-wrench"></i> -->
-                                    <i class="material-icons">extension</i>
-                                </div>
-                            </div>
-                            <!-- <h3>Final Recommendation &#8212;</h3> -->
-                            <p>Every project presents a unique combination of priorities and constraints, from sequence of construction to budget and schedule. We create customized project delivery strategies, choosing from among our construction engineering services to meet the specific needs of each project and client.</p>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </section>

@@ -9,4 +9,6 @@ class IndexView(TemplateView):
         context = super().get_context_data(*args, **kwargs)
         context['company'] = models.Company.objects.all()[0]
         context['slide_list'] = models.Slide.objects.all()
+        context['staff_list'] = models.Staff.objects.all()
+        context['process_list'] = models.Process.objects.all()
         return context

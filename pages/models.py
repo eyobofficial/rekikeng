@@ -40,8 +40,9 @@ class Company(Base):
         max_length=60,
         default='Unkown',
     )
-    description1 = models.TextField()
-    description2 = models.TextField()
+    description1 = models.TextField('Company description')
+    description2 = models.TextField('More company description')
+    team_description = models.TextField('Short team description')
     location = models.CharField('Location name', max_length=100)
     subcity = models.CharField(max_length=100)
     city = models.CharField(max_length=100, default='Addis Ababa')
@@ -85,13 +86,13 @@ class Slide(Base):
 def staff_avatar_path(instance, filename):
     ext = filename.split('.')[-1]
     avatar_name = instance.full_name.lower().replace(' ', '_')
-    return 'static/img/staffs/{}.{}'.format(avatar_name, ext)
+    return 'staffs/avatar{}.{}'.format(avatar_name, ext)
 
 
 def staff_cv_path(instance, filename):
     ext = filename.split('.')[-1]
     cv_name = instance.full_name.lower().replace(' ', '_')
-    return 'static/doc/staffs/{}.{}'.format(cv_name, ext)
+    return 'staff/cv/{}.{}'.format(cv_name, ext)
 
 
 class Staff(Base):
@@ -110,8 +111,8 @@ class Staff(Base):
 
 class Process(Base):
     title = models.CharField(max_length=255)
+    icon = models.CharField(max_length=100, blank=True)
     description = models.TextField()
-    picture = models.ImageField(upload_to='static/img/process/')
 
     class Meta:
         verbose_name_plural = 'Process'
