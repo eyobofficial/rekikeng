@@ -1849,7 +1849,7 @@ html[xmlns] .slides {
   border: 1px solid #232323;
 }
 .dgaDinCondWeb {
-  font-family: "ff-din-web-condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -1973,7 +1973,7 @@ ol {
   padding-left: 2px;
   text-align: center;
   text-transform: uppercase;
-  font-family: "ff-din-web-condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -2276,12 +2276,12 @@ ol {
   text-align: center;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
-  font-family: "ff-din-web-condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
 }
 #home .content .titles h3 {
-  font-size: 115px;
+  font-size: 110px;
   letter-spacing: 5px;
   line-height: 105px;
   padding-top: 45px;
@@ -2416,7 +2416,7 @@ ol {
   line-height: 70px;
   list-style: none;
   padding: 0 25px;
-  font-family: "ff-din-web-condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -2436,7 +2436,7 @@ ol {
   text-align: center;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
-  font-family: "ff-din-web-condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -2469,7 +2469,7 @@ ol {
   font-size: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: "ff-din-web-condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -2648,7 +2648,7 @@ ol {
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  font-family: "ff-din-web-condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -2736,7 +2736,7 @@ ol {
   font-weight: normal;
   line-height: 54px;
   text-transform: uppercase;
-  font-family: "ff-din-web-condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -2843,7 +2843,7 @@ ol {
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  font-family: "ff-din-web-condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
