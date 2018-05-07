@@ -16,3 +16,6 @@ temp/*
 
 # Media files
 media/*
+
+# Database
+db.sqlite3
