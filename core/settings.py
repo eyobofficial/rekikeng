@@ -60,7 +60,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates', ],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,14 +135,26 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Change the default Auth User model
 AUTH_USER_MODEL = 'pages.CustomUser'
 
+LOGOUT_REDIRECT_URL = '/'
+
 
 # Django-suit Configurations
 SUIT_CONFIG = {
     'ADMIN_NAME': 'Rekik Engineering',
     'HEADER_DATE_FORMAT': 'M d, Y',
+    'SEARCH_URL': '/admin/pages/company/',
     'MENU': (
         # Rename app and set icon
-        {'app': 'pages', 'label': 'Settings', 'icon':'icon-cog', 'models': (
-            {'model': 'pages.company', 'label': 'General', 'icon': 'icon-cog' },
+        {'app': 'pages', 'label': 'Settings', 'icon': 'icon-cog', 'models': (
+            {'model': 'pages.company', 'label': 'Company Details'},
+            {'model': 'pages.slide', 'label': 'Slide'},
+            {'model': 'pages.staff', 'label': 'Team'},
+            {'model': 'pages.process', 'label': 'Process'},
+            {'model': 'pages.service', 'label': 'Service'},
+        )},
+        {'label': 'Accounts', 'icon': 'icon-cog', 'models': (
+            'pages.customuser', 'auth.group',
+        )},
+
     ),
 }
