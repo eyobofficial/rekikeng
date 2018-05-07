@@ -35,6 +35,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -133,3 +134,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Change the default Auth User model
 AUTH_USER_MODEL = 'pages.CustomUser'
+
+
+# Django-suit Configurations
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Rekik Engineering',
+    'HEADER_DATE_FORMAT': 'M d, Y',
+    'MENU': (
+        # Rename app and set icon
+        {'app': 'pages', 'label': 'Settings', 'icon':'icon-cog', 'models': (
+            {'model': 'pages.company', 'label': 'General', 'icon': 'icon-cog' },
+    ),
+}
