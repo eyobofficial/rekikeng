@@ -102,7 +102,11 @@ class Staff(Base):
     full_name = models.CharField(max_length=100)
     position = models.CharField(max_length=100)
     bio = models.TextField('Short bio')
-    avatar = models.ImageField(upload_to=staff_avatar_path, blank=True)
+    avatar = models.ImageField(
+        upload_to=staff_avatar_path,
+        blank=True,
+        help_text='Upload a 360x360 pixel .jpg image.'
+    )
     cv = models.FileField(upload_to=staff_cv_path, blank=True)
 
     def __str__(self):
