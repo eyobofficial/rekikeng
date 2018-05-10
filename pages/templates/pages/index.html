@@ -18,10 +18,6 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 
-        <!-- Typekit -->
-        <script type="text/javascript" src="{% static 'js/lib/ppi0tso.js' %}"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
         <!-- CSS -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Open+Sans" rel="stylesheet"> 
@@ -350,10 +346,10 @@
                             <p>{{ company.phone }}</p>
                             <p><a href="mailto:sol.tesfay@gmail.com">{{ company.email }}</a></p>
                             <ul class="list-inline social-media-icons">
-                                <li><a href="{{ company.facebook }}" title="Facebook"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="{{ company.instagram }}" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="{{ company.linkedin }}" title="Linkedin"><i class="fa fa-linkedin-square"></i></a></li>
-                                <li><a href="{{ company.twitter }}" title="Twitter"><i class="fa fa-twitter-square"></i></a></li>
+                                <li><a href="{{ company.facebook }}" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="{{ company.instagram }}" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="{{ company.linkedin }}" title="Linkedin" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li><a href="{{ company.twitter }}" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
                             </ul>
                             
                         </div>
