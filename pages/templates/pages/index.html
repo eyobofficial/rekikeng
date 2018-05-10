@@ -133,9 +133,9 @@
                                     {% for staff in staff_list %}
                                     <li data-id="{{ forloop.counter }}">
                                         {% if staff.avatar %}
-                                        <img src="{{ staff.avatar.url }}" alt="{{ staff.full_name }}">
+                                        <img src="{{ staff.avatar.url }}" alt="{{ staff.full_name }}" title="{{ staff.full_name|title }}">
                                         {% else %}
-                                        <img src="{% static 'img/john_doe_avatar.png' %}" data-id="dale" alt="John">
+                                        <img src="{% static 'img/john_doe_avatar.png' %}" data-id="dale" alt="{{ staff.full_name|title }}" title="{{ staff.full_name|title }}">
                                         {% endif %}
                                     </li>
                                     {% endfor %}
@@ -373,8 +373,8 @@
                                    data-theme="dark" 
                                    data-chrome="nofooter noheader transparent noborders" 
                                    data-tweet-limit="1" 
-                                   href="https://twitter.com/hashtag/HappyNewYear2018" data-widget-id="945082809684758529">Latest Tweets</a>
-                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                               
+                                   href="https://twitter.com/hashtag/rekikeng" data-widget-id="945082809684758529">#rekikeng Tweets</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                              
                             </div>
                         </div>
                     </div>

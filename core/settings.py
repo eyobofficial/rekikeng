@@ -147,10 +147,10 @@ SUIT_CONFIG = {
         # Rename app and set icon
         {'app': 'pages', 'label': 'Settings', 'icon': 'icon-cog', 'models': (
             {'model': 'pages.company', 'label': 'Company Details'},
-            {'model': 'pages.slide', 'label': 'Slide'},
-            {'model': 'pages.staff', 'label': 'Team'},
+            {'model': 'pages.slide', 'label': 'Slides'},
+            {'model': 'pages.staff', 'label': 'Staffs'},
             {'model': 'pages.process', 'label': 'Process'},
-            {'model': 'pages.service', 'label': 'Service'},
+            {'model': 'pages.service', 'label': 'Services'},
         )},
         {'label': 'Accounts', 'icon': 'icon-cog', 'models': (
             'pages.customuser', 'auth.group',

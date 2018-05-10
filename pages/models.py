@@ -92,7 +92,7 @@ def staff_avatar_path(instance, filename):
 def staff_cv_path(instance, filename):
     ext = filename.split('.')[-1]
     cv_name = instance.full_name.lower().replace(' ', '_')
-    return 'staff/cv/{}.{}'.format(cv_name, ext)
+    return 'staffs/cv/{}.{}'.format(cv_name, ext)
 
 
 class Staff(Base):
