@@ -1854,12 +1854,12 @@ html[xmlns] .slides {
   font-weight: 400;
 }
 .dgaDinMedWeb {
-  font-family: "ff-din-web-pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
 }
 .dgaDinRegWeb {
-  font-family: "ff-din-web-pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -1908,7 +1908,7 @@ h3 {
   letter-spacing: 1px;
   line-height: 21px;
   text-transform: uppercase;
-  font-family: "ff-din-web-pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
 }
@@ -1921,7 +1921,7 @@ p,
 ul {
   color: #eaeaea;
   font-size: 14px;
-  font-family: "ff-din-web-pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -2136,7 +2136,7 @@ ol {
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  font-family: "ff-din-web-pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -2356,7 +2356,7 @@ ol {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   border: 1px solid #232323;
-  font-family: "ff-din-web-pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
 }
@@ -2511,7 +2511,7 @@ ol {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   border: 1px solid #232323;
-  font-family: "ff-din-web-pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
 }
