@@ -95,6 +95,7 @@ ul.list-inline li {
 
 .accordion .ui-accordion-content-active {
     text-align: justify;
+    line-height: 1.6;
     background-color: #232323;
     border: none;
     padding: 12px;
