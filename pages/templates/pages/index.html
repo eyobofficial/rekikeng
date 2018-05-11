@@ -266,7 +266,7 @@
                                         <li>
                                             <h2>{{ service.title }}</h2>
                                             <span>
-                                                {{ service.description }}
+                                                {{ service.description|linebreaks }}
                                             </span>
                                         </li>
                                         {% endfor %}
@@ -321,7 +321,7 @@
                           {% for service in service_list %}
                           <h3><i class="fa fa-chevron-right"></i> {{ service.title }}</h3>
                           <div>
-                           {{ service.description }}
+                           {{ service.description|linebreaks }}
                           </div>
                           {% endfor %}
                         </div><!-- /#accrdion -->
