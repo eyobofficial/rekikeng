@@ -47,8 +47,12 @@
                         <img src="{% static 'img/placeholder.png' %}" data-id="mobile_nav" id="plus" class="load-png-or-svg" alt="close navigation">
                     </a>
                     <a class="brand hidden-phone" href="#home">
-                        <img src="{% static 'img/logo.png' %}" data-id="logo" class="logo" alt="{{ company.name }} Logo">
-                        <img src="{% static 'img/logo_hover.png' %}" data-id="logo_hover" class="logo" alt="{{ company.name }} logo hover">
+                        {% if company.logo %}
+                        <img src="{{ company.logo.url}}" data-id="logo" class="logo" alt="{{ company.name }} Logo">
+                            {% if company.logo_hover %}
+                            <img src="{{ company.logo_hover.url }}" data-id="logo_hover" class="logo" alt="{{ company.name }} logo hover">
+                            {% endif %}
+                        {% endif %}
                         {{ company.name }}
                     </a>
                     <div class="nav-collapse collapse">
@@ -67,7 +71,9 @@
         <section id="mobile-banner" class="hidden-desktop hidden-tablet">
             <div class="container-fluid">
                 <div class="text-center">
-                    <img src="{% static 'img/logo-bg.png' %}" class="mobile-logo" alt="Solomon Engineering Group">
+                    {% if company.logo_mobile %}
+                    <img src="{{ company.logo_mobile.url }}" class="mobile-logo" alt="{{ company.name }}">
+                    {% endif %}
                     <h1>{{ company.name }}</h1>
                     <p class="text-fade text-center small">{{ company.tagline }}</p>
                 </div>
@@ -80,8 +86,8 @@
                 {% for slide in slide_list %}
                 <li data-id="{{ forloop.counter0 }}">
                     <div class="image">
-                        {% if slide.wallpaper.url %}
-                        <img src="{{ slide.wallpaper }}" alt="{{ slide.short_title }}">
+                        {% if slide.wallpaper %}
+                        <img src="{{ slide.wallpaper.url }}" alt="{{ slide.short_title }}">
                         {% else %}
                         <img src="{% static 'img/placeholder.png' %}" alt="{{ slide.title }}">
                         {% endif %}

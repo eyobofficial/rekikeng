@@ -16,6 +16,24 @@ class CustomUserModel(admin.ModelAdmin):
 @admin.register(models.Company)
 class CompanyAdmin(admin.ModelAdmin):
     list_display = ['name', 'updated_at', ]
+    fieldsets = [
+        ('Company Details', {
+            'fields': (
+                'name', 'tagline',
+                'location', 'subcity', 'city', 'country',
+                'phone', 'email',
+            ),
+        }),
+        ('Company Logo', {
+            'fields': ('logo', 'logo_hover', 'logo_mobile', ),
+        }),
+        ('About Us', {
+            'fields': (
+                'quote', 'quote_speaker',
+                'description1', 'description2', 'team_description',
+            ),
+        }),
+    ]
 
 
 @admin.register(models.Slide)

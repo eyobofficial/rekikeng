@@ -143,15 +143,19 @@ ul.list-inline li {
 
 
 /****************** Mobile Logo ******************/
+#mobile-banner {
+    padding-top: 40%;
+}
+
 #mobile-banner img {
     display: block;
     width: 80%;
-    margin: 25% auto 60px;
+    margin: 0 auto;
 }
 
 #mobile-banner h1 {
     width: 80%;
-    margin: 0 auto 10px;
+    margin: 60px auto 10px;
     text-align: center;
     color: #fff;
     font-size: 18px;

@@ -53,6 +53,24 @@ class Company(Base):
     twitter = models.URLField(blank=True)
     instagram = models.URLField(blank=True)
     linkedin = models.URLField(blank=True)
+    logo = models.ImageField(
+        'Logo (Desktop)',
+        upload_to='logo/',
+        null=True, blank=True,
+        help_text='Upload 100x69 pixels trasparent PNG image file.'
+    )
+    logo_hover = models.ImageField(
+        'Logo on hover (Desktop)',
+        upload_to='logo/',
+        null=True, blank=True,
+        help_text='Upload 100x69 pixels trasparent PNG image file.'
+    )
+    logo_mobile = models.ImageField(
+        'Logo for mobile',
+        upload_to='logo/',
+        null=True, blank=True,
+        help_text='Upload 597x412 pixels trasparent PNG image file.'
+    )
 
     class Meta:
         verbose_name_plural = 'Company'
@@ -64,7 +82,7 @@ class Company(Base):
 def slide_path(instance, filename):
     ext = filename.split('.')[-1]
     wallpaper_name = instance.title.lower().replace(' ', '_')
-    return 'static/img/slides/{}.{}'.format(wallpaper_name, ext)
+    return 'slides/{}.{}'.format(wallpaper_name, ext)
 
 
 class Slide(Base):
