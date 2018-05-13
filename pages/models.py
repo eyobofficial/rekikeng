@@ -104,7 +104,7 @@ class Slide(Base):
 def staff_avatar_path(instance, filename):
     ext = filename.split('.')[-1]
     avatar_name = instance.full_name.lower().replace(' ', '_')
-    return 'staffs/avatar{}.{}'.format(avatar_name, ext)
+    return 'staffs/avatar/{}.{}'.format(avatar_name, ext)
 
 
 def staff_cv_path(instance, filename):
