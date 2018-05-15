@@ -40,6 +40,7 @@ class Company(Base):
         max_length=60,
         default='Unkown',
     )
+    keywords = models.TextField(blank=True)
     description1 = models.TextField('Company description')
     description2 = models.TextField('More company description')
     team_description = models.TextField('Short team description')

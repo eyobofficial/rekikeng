@@ -30,7 +30,7 @@ class CompanyAdmin(admin.ModelAdmin):
         ('About Us', {
             'fields': (
                 'quote', 'quote_speaker',
-                'description1', 'description2', 'team_description',
+                'description1', 'description2', 'team_description', 'keywords',
             ),
         }),
         ('Social Media Accounts', {

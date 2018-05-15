@@ -11,7 +11,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="author" content="Eyob Tariku">
         <meta name="description" content="{{ company.description1 }}">
-        <meta name="keywords" content="">
+        <meta name="keywords" content="{{ company.keywords }}">
         <meta name="HandheldFriendly" content="True">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -272,7 +272,7 @@
                                         {% for service in service_list %}
                                         <li>
                                             <h2>{{ service.title }}</h2>
-                                            <span>
+                                            <span style="text-align: justify">
                                                 {{ service.description|linebreaks }}
                                             </span>
                                         </li>
