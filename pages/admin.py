@@ -25,12 +25,17 @@ class CompanyAdmin(admin.ModelAdmin):
             ),
         }),
         ('Company Logo', {
-            'fields': ('logo', 'logo_hover', 'logo_mobile', ),
+            'fields': ('logo', 'logo_hover', 'logo_mobile', 'fevicon', ),
         }),
         ('About Us', {
             'fields': (
                 'quote', 'quote_speaker',
                 'description1', 'description2', 'team_description',
+            ),
+        }),
+        ('Social Media Accounts', {
+            'fields': (
+                'facebook', 'twitter', 'instagram', 'linkedin',
             ),
         }),
     ]

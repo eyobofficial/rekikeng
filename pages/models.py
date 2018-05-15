@@ -71,6 +71,12 @@ class Company(Base):
         null=True, blank=True,
         help_text='Upload 597x412 pixels trasparent PNG image file.'
     )
+    fevicon = models.ImageField(
+        'Fevicon (Title Icon)',
+        upload_to='fevicon/',
+        null=True, blank=True,
+        help_text='Upload 23x16 pixels .ico icon file.'
+    )
 
     class Meta:
         verbose_name_plural = 'Company'

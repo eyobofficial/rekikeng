@@ -16,7 +16,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+        {% if company.fevicon %}
+        <link rel="shortcut icon" href="{{ company.fevicon.url }}" type="image/x-icon">
+        {% endif %}
 
         <!-- CSS -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -48,7 +50,7 @@
                     </a>
                     <a class="brand hidden-phone" href="#home">
                         {% if company.logo %}
-                        <img src="{{ company.logo.url}}" data-id="logo" class="logo" alt="{{ company.name }} Logo">
+                        <img src="{{ company.logo.url }}" data-id="logo" class="logo" alt="{{ company.name }} Logo">
                             {% if company.logo_hover %}
                             <img src="{{ company.logo_hover.url }}" data-id="logo_hover" class="logo" alt="{{ company.name }} logo hover">
                             {% endif %}
