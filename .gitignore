@@ -18,5 +18,8 @@ logs/
 # Media files
 media/*
 
+# Static files
+staticfiles/*
+
 # Database
 db.sqlite3
