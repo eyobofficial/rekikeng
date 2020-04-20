@@ -19,7 +19,7 @@ logs/
 media/*
 
 # Static files
-staticfiles/*
+static/*
 
 # Database
 db.sqlite3
