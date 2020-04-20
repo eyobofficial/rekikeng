@@ -32,7 +32,6 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
-    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -134,25 +133,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 AUTH_USER_MODEL = 'pages.CustomUser'
 
 LOGOUT_REDIRECT_URL = '/'
-
-
-# Django-suit Configurations
-SUIT_CONFIG = {
-    'ADMIN_NAME': 'Rekik Engineering',
-    'HEADER_DATE_FORMAT': 'M d, Y',
-    'SEARCH_URL': '/admin/pages/company/',
-    'MENU': (
-        # Rename app and set icon
-        {'app': 'pages', 'label': 'Settings', 'icon': 'icon-cog', 'models': (
-            {'model': 'pages.company', 'label': 'Company Details'},
-            {'model': 'pages.slide', 'label': 'Slides'},
-            {'model': 'pages.staff', 'label': 'Staffs'},
-            {'model': 'pages.process', 'label': 'Process'},
-            {'model': 'pages.service', 'label': 'Services'},
-        )},
-        {'label': 'Accounts', 'icon': 'icon-cog', 'models': (
-            'pages.customuser', 'auth.group',
-        )},
-
-    ),
-}
