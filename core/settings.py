@@ -133,3 +133,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 AUTH_USER_MODEL = 'pages.CustomUser'
 
 LOGOUT_REDIRECT_URL = '/'
+
+
+# GOOGLE MAP API
+GOOGLE_MAP_API = config('GOOGLE_MAP_API')
