@@ -23,3 +23,9 @@ static/*
 
 # Database
 db.sqlite3
+
+# IDE
+.vscode/*
+
+# Dev modules
+fabfile.py

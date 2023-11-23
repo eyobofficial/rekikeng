@@ -4,3 +4,4 @@ Pillow==10.1.0
 python-decouple==3.1
 pytz==2018.4
 sqlparse==0.3.1
+fabric==3.2.2
