@@ -1,4 +1,4 @@
-[![CI/CD Pipeline](https://github.com/eyobofficial/eyob-tech/actions/workflows/ci.yaml/badge.svg)](https://github.com/eyobofficial/eyob-tech/actions/workflows/ci.yaml)
+[![Deploy](https://github.com/eyobofficial/rekikeng/actions/workflows/ci.yaml/badge.svg)](https://github.com/eyobofficial/rekikeng/actions/workflows/ci.yaml)
 
 # Rekik Engineering Website
 
