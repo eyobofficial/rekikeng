@@ -7,6 +7,10 @@ server {
         alias /root/rekikeng/static/;
     }
 
+    location /media/ {
+        alias /root/rekikeng/media/;
+    }
+
     location / {
         include proxy_params;
         proxy_pass http://unix:/run/gunicorn.sock;
