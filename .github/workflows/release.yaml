@@ -38,7 +38,7 @@ jobs:
         script: |
           cd "${{ secrets.WORK_DIR }}"
           git checkout "${{ secrets.RELEASE_BRANCH }}"
-          git add . && git stash && && git pull
+          git add . && git stash && git pull
           source venv/bin/activate
           python -m pip install -r requirements.txt
           python manage.py migrate --no-input

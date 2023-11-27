@@ -1,4 +1,4 @@
-[![Deploy](https://github.com/eyobofficial/rekikeng/actions/workflows/ci.yaml/badge.svg)](https://github.com/eyobofficial/rekikeng/actions/workflows/ci.yaml)
+[![Release](https://github.com/eyobofficial/rekikeng/actions/workflows/release.yaml/badge.svg)](https://github.com/eyobofficial/rekikeng/actions/workflows/release.yaml)
 
 # Rekik Engineering Website
 
